@@ -7,7 +7,7 @@ class elev:
 		start = raw_input("")
 		if start == "":
 			return self.namn
-
+#sdfuhdkm
 	def sendHand(self):
 		host = "localhost" 
 		port = 5001
