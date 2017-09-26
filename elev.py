@@ -14,8 +14,15 @@ class elev:
 
 		server = ("localhost", 5000)
 
-		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-		s.bind((host, port))
+		while True:
+			try:
+				s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+				s.bind((host, port))
+				s.sendto("En ny elev har kopplats", server)
+				break
+			except:
+				port+=1
+
 
 		while True:
 			elevnamn = self.sendName()

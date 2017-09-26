@@ -8,7 +8,7 @@ class classroom:
 		print "\t\t\t"+self.className.center(27, "#")
 		#print "\t\t\t#\t\t\t  #"
 		for i in range(len(namn)):
-			print "\t\t\t"+str(i+1) + namn[i].center(25) + "#"
+			print "\t\t\t"+"#" + namn[i].center(25) + "#"
 		print "\t\t\t"+"#".center(27, "#")
 		print "\n"*5
 
