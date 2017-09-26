@@ -22,11 +22,16 @@ class classroom:
 
 		print "Elever kan nu ansluta!"
 
-		while True:
+		while True: 
+			dubble = True
 			data, addr = s.recvfrom(1024)
 			if data != None:
-				classList.append(str(data))
-				self.printList(classList)
+				for i in range(len(classList)):
+					if classList[i] == data:
+						dubble = False
+				if dubble:	
+					classList.append(str(data))
+					self.printList(classList)
 		s.close()
 
 if __name__ == "__main__":

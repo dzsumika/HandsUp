@@ -18,7 +18,7 @@ class elev:
 			try:
 				s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 				s.bind((host, port))
-				s.sendto("En ny elev har kopplats", server)
+				#s.sendto("ny", server)
 				break
 			except:
 				port+=1
